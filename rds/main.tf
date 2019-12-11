@@ -6,13 +6,13 @@
 resource "aws_db_subnet_group" "rds_subnet_group" {
   name        = "terra-db-subnet"
   description = "RDS subnet group"
-  subnet_ids  = [var.subnet_ids]
+  subnet_ids  = ["var.subnet_ids"]
 }
 
 resource "aws_security_group" "rds_sg" {
   name        = "rds-db-tf"
   description = "Access to the RDS instances from the VPC"
-  vpc_id      = aws_vpc.terra-vpc.id
+  vpc_id      = var.vpc.id
 
   ingress {
     from_port   = 3306
