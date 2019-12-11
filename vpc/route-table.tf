@@ -3,15 +3,15 @@ resource "aws_route_table" "terra-vpc-route-table" {
 
   route {
     cidr_block = "10.0.0.0/0"
-    gateway_id = aws_internet_gateway.demo-vpc-internet-gateway.id
+    gateway_id = aws_internet_gateway.terra-vpc-internet-gateway.id
   }
 
   tags = {
-    Name = "demo-vpc-route-table"
+    Name = "terra-vpc-route-table"
   }
 }
 
-resource "aws_route_table_association" "demo-vpc-route-table-association1" {
-  subnet_id      = aws_subnet.demo-vpc-subnet1.id
+resource "aws_route_table_association" "terra-vpc-route-table-association" {
+  subnet_id      = aws_subnet.terra-public-subnet.id
   route_table_id = aws_route_table.terra-vpc-route-table.id
 }
