@@ -1,19 +1,11 @@
-variable "environment" {
-  description = "The environment"
-}
-
 variable "subnet_ids" {
-  type        = "list"
+  type        = list
   description = "Subnet ids"
 }
 
 variable "vpc_id" {
   description = "The VPC id"
 }
-
-//variable "allowed_security_group_id" {
-//  description = "The allowed security group id to connect on RDS"
-//}
 
 variable "allocated_storage" {
   default     = "20"
@@ -30,7 +22,7 @@ variable "multi_az" {
 }
 
 variable "database_name" {
-  default     = "dummy_data"
+  default     = "terraform"
   description = "The database name"
 }
 
@@ -40,6 +32,6 @@ variable "database_username" {
 }
 
 variable "database_password" {
-  default     = "testing123"
+  default     = "admin123"
   description = "The password of the database"
 }
