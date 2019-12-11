@@ -1,11 +1,7 @@
-variable "ecs-cluster-name" {
-    description = "The name for the cluster."
-    default = "demo-ecs-cluster"
-}
 
-variable "ecs-key-pair-name" {
+variable "key-name" {
     description = "The name for the cluster."
-    default = "demo"
+    default = "rds-key"
 }
 
 /*====
