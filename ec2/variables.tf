@@ -7,10 +7,7 @@ variable "subnet-id-1" {}
 variable "subnet-id-2" {}
 variable "security-group-id" {}
 variable "rds-security-group" {}
-variable "ecs-cluster-name" {}
-variable "ecs-instance-role-name" {}
-variable "ecs-instance-profile-name" {}
-variable "ecs-key-pair-name" {}
+variable "key-name" {}
 
 
 //----------------------------------------------------------------------
