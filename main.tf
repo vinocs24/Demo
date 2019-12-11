@@ -24,8 +24,8 @@ module "ec2" {
     vpc-id                      = "module.vpc.id"
     public-sub                  = "module.vpc.public-id"
     private-sub                 = "module.vpc.private-id"
-    security-group-id           = "module.vpc.security-group-id"
-    rds-security-group          = "module.rds.db_access_sg_id"
+    security-group-id           = "module.vpc.terra-security-group-id"
+    rds-security-group          = "module.rds.terra_db_sg_id"
     key-name                    = var.key-name
 }
 
