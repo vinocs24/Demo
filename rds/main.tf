@@ -12,7 +12,7 @@ resource "aws_db_subnet_group" "rds_subnet_group" {
 resource "aws_security_group" "rds_sg" {
   name        = "rds-db-tf"
   description = "Access to the RDS instances from the VPC"
-  vpc_id      = var.vpc.id
+  vpc_id      = var.vpc_id
 
   ingress {
     from_port   = 3306
