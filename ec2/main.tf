@@ -1,6 +1,6 @@
 resource "aws_instance" "ec2-instance" {
-    name                        = var.configuration-name
-    image_id                    = var.image-id
+    #name                        = var.configuration-name
+    ami                         = var.ami
     instance_type               = var.instance-type
     security_groups             = [var.security-group-id, var.rds-security-group]
     associate_public_ip_address = true
