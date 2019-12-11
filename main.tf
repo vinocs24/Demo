@@ -22,11 +22,11 @@ module "ec2" {
     source = "./ec2"
 
     vpc-id                      = "module.vpc.id"
+    public-sub                  = "module.vpc.public-id"
+    private-sub                 = "module.vpc.private-id"
     security-group-id           = "module.vpc.security-group-id"
     rds-security-group          = "module.rds.db_access_sg_id"
-    public-sub                  = "module.vpc.subnet1-id"
-    private-sub                 = "module.vpc.subnet2-id"
-    ecs-key-pair-name           = "var.key-name"
+    key-name                    = var.key-name
 }
 
 module "rds" {
