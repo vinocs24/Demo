@@ -3,8 +3,8 @@
 //----------------------------------------------------------------------
 
 variable "vpc-id" {}
-variable "subnet-id-1" {}
-variable "subnet-id-2" {}
+variable "public-sub" {}
+variable "private-sub" {}
 variable "security-group-id" {}
 variable "rds-security-group" {}
 variable "key-name" {}
