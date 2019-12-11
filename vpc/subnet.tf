@@ -13,7 +13,7 @@ resource "aws_subnet" "terra-private-subnet" {
     cidr_block = "10.0.1.0/24"
     availability_zone = "us-west-2b"
 
-    tags {
+    tags = {
         Name = "terra-private-subnet"
     }
 }
