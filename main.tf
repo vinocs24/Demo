@@ -24,8 +24,8 @@ module "ec2" {
     vpc-id                      = "module.vpc.id"
     security-group-id           = "module.vpc.security-group-id"
     rds-security-group          = "module.rds.db_access_sg_id"
-    subnet-id-1                 = "module.vpc.subnet1-id"
-    subnet-id-2                 = "module.vpc.subnet2-id"
+    public-sub                  = "module.vpc.subnet1-id"
+    private-sub                 = "module.vpc.subnet2-id"
     ecs-key-pair-name           = "var.key-name"
 }
 
