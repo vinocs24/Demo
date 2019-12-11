@@ -19,9 +19,9 @@ variable "configuration-name" {
     default = "demo-terraform"
 }
 
-variable "image-id" {
-    description = "The name for the autoscaling group for the cluster."
-    default = "ami-08d489468314a58df"
+variable "ami" {
+  description = "EC2 Instances AMIs"
+  default = "ami-08d489468314a58df"
 }
 
 variable "instance-type" {
