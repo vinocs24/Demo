@@ -35,6 +35,6 @@ resource "aws_security_group" "terra-vpc-sg" {
     }
 }
 
-output "security-group-id" {
+output "terra-security-group-id" {
   value = aws_security_group.terra-vpc-sg.id
 }
