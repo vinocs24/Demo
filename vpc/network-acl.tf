@@ -1,6 +1,6 @@
 resource "aws_network_acl" "terra-vpc-network-acl" {
     vpc_id = aws_vpc.terra-vpc.id
-    subnet_ids = ["aws_subnet.terra-public-subnet.id"]
+    subnet_ids = ["aws_subnet.terra-public-subnet.id","aws_subnet.terra-private-subnet.id"]
 
     egress {
         protocol   = "-1"
